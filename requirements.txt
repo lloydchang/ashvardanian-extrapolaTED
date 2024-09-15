@@ -1,3 +1,4 @@
+# Existing requirements
 numpy
 requests
 pandas
@@ -7,9 +8,9 @@ stringzilla
 usearch
 fastapi
 
-datasets # HuggingFace datasets to fetch Wikipedia and and pre-computed Arxiv
-mwparserfromhell # To parse Wikipedia articles
-apache_beam # For parsing runners
+datasets  # HuggingFace datasets to fetch Wikipedia and pre-computed Arxiv
+mwparserfromhell  # To parse Wikipedia articles
+apache_beam  # For parsing runners
 
 # Complex dependencies:
 pyarrow
@@ -18,3 +19,10 @@ transformers
 
 # Interactive editing
 ipykernel
+
+# Dependency with specific version
+encode==0.0.0
+idna==2.10  # Downgraded to avoid conflicts with newer idna versions
+
+torch
+tqdm

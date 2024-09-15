@@ -1,14 +1,15 @@
 name: ExtrapolaTED
 channels:
   - pytorch
-  - nvidia
+  - defaults  # Remove nvidia channel
 dependencies:
-  - pytorch-cuda=11.8
-  - pytorch
+  - python=3.10
+  - pytorch  # This will automatically install the CPU version on osx-arm64
   - torchvision
   - torchaudio
+  - numpy
+  - pip
   - pip:
-    - python=3.10
     - uform
     - usearch
     - simsimd
@@ -24,4 +25,3 @@ dependencies:
     - pillow
     - pyarrow
     - requests
-    - numpy

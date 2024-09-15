@@ -1,3 +1,5 @@
+#!/bin/bash -x
+
 # Downloads pre-assembled Arxiv abstracts and pre-computed E5 embeddings from HuggingFace Datasets
 
 urls=(
@@ -15,5 +17,5 @@ mkdir -p "$save_dir"
 for url in "${urls[@]}"; do
 
   # Download the file
-  wget -P "$save_dir" "$url"
+  wget -c -P "$save_dir" "$url"
 done

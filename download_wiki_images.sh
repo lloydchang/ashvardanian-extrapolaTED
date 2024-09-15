@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/bin/bash -x
+
 # Downloads metatadata for images from the Wikipedia-based Image Text Dataset (WIT)
 
 # List of URLs to download
@@ -40,7 +41,7 @@ for url in "${urls[@]}"; do
   file_path="$save_dir/$file_name"
 
   # Download the file
-  wget -P "$save_dir" "$url"
+  wget -c -P "$save_dir" "$url"
 
   # Unpack the file
   gunzip "$file_path"

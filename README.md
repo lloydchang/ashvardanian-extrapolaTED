@@ -58,9 +58,13 @@ Get started with extrapolaTED in a breeze:
      ```sh
      ./download_arxiv_texts.sh
      ./download_wiki_images.sh
-     python prepare_arxiv_texts.ipynb
+     jupyter nbconvert --to script prepare_arxiv_texts.ipynb
+     python prepare_arxiv_texts.py
+     jupyter nbconvert --to script prepare_ted_texts.ipynb
      python prepare_ted_texts.ipynb
+     jupyter nbconvert --to script prepare_wiki_images.ipynb
      python prepare_wiki_images.py
+     jupyter nbconvert --to script prepare_wiki_texts.ipynb
      python prepare_wiki_texts.ipynb
      ```
 
